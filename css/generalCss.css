@@ -21,6 +21,7 @@ body {
 
   color: black;
   background-color: #00ffff;
+  box-shadow: 0 0 40px 5px #00ffff;
   border: 1px solid transparent;
 }
 
