@@ -1,14 +1,25 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}
 body {
-  margin: 100px;
+  margin-top: 3em;
+  margin-left: 3rem;
   font-family: "Times New Roman", Times, serif;
   background-image: url(/assets/img/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   color: white;
   text-align: center;
   box-sizing: content-box;
 }
-
+header {
+  margin-bottom: 2em;
+  text-align: justify;
+}
 #logo {
-  width: 100px;
+  width: 15%;
+  margin-left: 7rem;
 }
 #title-results h3 {
   font-size: 3em;
@@ -53,4 +64,18 @@ h4 {
   margin-top: 3vw;
   border: 2px solid white;
   background: transparent;
+}
+#correct h3,
+#wrong h3 {
+  font-size: 3em;
+}
+#correct p,
+#wrong p {
+  font-weight: 800;
+}
+#rating {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
 }
