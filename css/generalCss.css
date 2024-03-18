@@ -1,0 +1,37 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}
+
+body {
+  background-image: url(/assets/img/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.btnBlueNeon {
+  width: 10%;
+  font-size: 1.8rem;
+  padding-bottom: 0.8rem;
+  padding-top: 0.8rem;
+
+  color: black;
+  background-color: #00ffff;
+  border: 1px solid transparent;
+}
+
+.center {
+  text-align: center;
+}
+
+.logo {
+  width: 15%;
+}
+
+.marginLeft {
+  margin-left: 7rem;
+}
