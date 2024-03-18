@@ -1,0 +1,56 @@
+body {
+  margin: 100px;
+  font-family: "Times New Roman", Times, serif;
+  background-image: url(/assets/img/bg.jpg);
+  color: white;
+  text-align: center;
+  box-sizing: content-box;
+}
+
+#logo {
+  width: 100px;
+}
+#title-results h3 {
+  font-size: 3em;
+  font-weight: 800;
+}
+#title-results p {
+  font-size: 2em;
+  margin-bottom: 3vw;
+}
+#circle {
+  max-height: 99px;
+  display: inline-block;
+  border: 40px solid #00ffff;
+  padding: 65px;
+  max-width: 107px;
+  border-radius: 120%;
+}
+#circle h3,
+h4 {
+  font-size: 1em;
+  font-weight: 800;
+}
+#circle h4 {
+  color: #00ffff;
+}
+#circle p {
+  margin-top: 15px;
+  font-size: 0.5em;
+}
+#circle,
+#correct,
+#wrong {
+  display: inline-block;
+}
+
+#btn-section button {
+  font-size: 1.1em;
+  font-weight: 700;
+  height: 5vw;
+  width: 17vw;
+  color: white;
+  margin-top: 3vw;
+  border: 2px solid white;
+  background: transparent;
+}
