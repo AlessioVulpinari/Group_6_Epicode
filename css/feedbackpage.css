@@ -29,7 +29,31 @@ h2 {
     margin-block: 2em;
   }
 
- 
+ #btnInfo {
+    margin-top: 20px;
+ }
+
+ #comment {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #D20094;
+    width: 400px;
+    padding: 7px;
+ }
+
+ #comment::placeholder {
+    padding-left: 20px;
+   
+ }
+
+ #comment:focus {
+    color: white;
+    border: paleturquoise 1px solid;
+    
+ }
+
+
+
 
 
   
