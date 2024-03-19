@@ -1,0 +1,70 @@
+aside {
+  display: flex;
+  justify-content: end;
+  margin-right: 7rem;
+}
+
+footer {
+  margin-top: 10rem;
+}
+
+.btn {
+  width: 40%;
+
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  cursor: pointer;
+  background-color: rgb(255, 255, 255, 0.1);
+
+  box-shadow: -1px -1px 3px white;
+  border: none;
+  border-radius: 40px;
+}
+
+.btnContainer {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.progressionBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, #391555 79%, transparent 80% 100%),
+    conic-gradient(#00ffff 95%, transparent 0);
+}
+
+.btnSelected {
+  background-color: #bc008b;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  margin-top: 4rem;
+}
+
+.title h3 {
+  font-size: 60px;
+  width: 40%;
+}
+
+#sectionBtn {
+  display: flex;
+  justify-content: center;
+}

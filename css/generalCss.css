@@ -30,7 +30,8 @@ body {
 }
 
 .logo {
-  width: 15%;
+  width: 15rem;
+  margin-top: 3rem;
 }
 
 .marginLeft {
