@@ -14,7 +14,7 @@ body {
   }
   .main-title h1 {
     font-size: 100px;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 1;
   }
   h1 span {
@@ -42,6 +42,10 @@ body {
     padding: 100px 0;
     margin-right: 200px;
   }
+  .container {
+    width: 1200px;
+    padding: 20px 0;
+  }
   .cr-wrapper *,
   .cr-wrapper *::before,
   .cr-wrapper *::after {
@@ -59,7 +63,7 @@ body {
   }
 
   .cr-wrapper {
-    display: table;
+    display: inline-block;
     position: relative;
     padding-left: 50px;
     cursor: pointer;
