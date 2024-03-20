@@ -2,8 +2,8 @@ const calcolaPercentualeCorrette = () => {
   let correctScore = document.getElementById("correct");
   let receivedVariable = localStorage.getItem("points");
   let receivedVariable2 = localStorage.getItem("totalQuestion");
-  let risposteCorrette = 6;
-  let risposteTotali = 10;
+  let risposteCorrette = receivedVariable;
+  let risposteTotali = receivedVariable2;
   let percentuale = (risposteCorrette / risposteTotali) * 100;
 
   let percentualeRisposteCorrette = percentuale.toFixed(1);

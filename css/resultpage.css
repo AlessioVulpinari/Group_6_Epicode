@@ -3,6 +3,9 @@
   --color-text: rgb(233, 233, 233);
 }
 /* Impostazioni globali */
+* {
+  user-select: none;
+}
 body {
   margin-top: 3em;
   margin-left: 3rem;
@@ -94,6 +97,11 @@ h4 {
   background: transparent;
   color: var(--color-text);
 }
+#btn-section button:hover {
+  color: #ffffff;
+  transform: scale(1.01);
+}
+
 #correct {
   text-align: left;
 }
