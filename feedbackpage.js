@@ -1,24 +1,22 @@
-let starContainer=document.getElementById('starContainer')
-let stars=document.querySelectorAll('.star')
-const starsArray=Array.from(stars)
-console.log(stars)
-console.log(starsArray)
-const handleHoverStar=(e)=> {
-    const index=getIndex(e.srcElement)
-    if(index!==-1){
-    for(let j=0; j<=index; j++){
-        starsArray[j].link.fill='red'
-        console.log(starsArray[j])
-    }}
-    
-    
-    }
-for(let i=0; i<starsArray.length; i++){
-    console.log(starsArray[i])
-    starsArray[i].addEventListener('mouseover', handleHoverStar)
+let starContainer = document.getElementById("starContainer")
+let stars = document.querySelectorAll(".star")
+const starsArray = Array.from(stars)
+
+const handleEnterStar = (e) => {
+  const index = getIndex(e.srcElement)
+
+  for (let j = 0; j <= index; j++) {
+    starsArray[j].childNodes[1].style.fill = "#00FFFF"
+  }
+
+  for (let k = index + 1; k < starsArray.length; k++) {
+    starsArray[k].childNodes[1].style.fill = "#0b113b"
+  }
 }
 
-const getIndex=(element)=> {
-return starsArray.indexOf(element)
+for (let i = 0; i < starsArray.length; i++) {
+  console.log(starsArray[i])
+  starsArray[i].addEventListener("mouseenter", handleEnterStar)
 }
 
+const getIndex = (element) => starsArray.indexOf(element)
