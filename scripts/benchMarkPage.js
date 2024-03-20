@@ -114,7 +114,9 @@ const createNewQuestion = (index) => {
   if (index < totalQuestion) {
     const container = document.getElementById("btnContainer")
     const title = document.querySelector(".title h3")
-    const questionCounter = document.querySelector("footer p")
+    const questionCounter = document.querySelector("footer span:first-of-type")
+    const violetText = document.querySelector("footer span:nth-of-type(2)")
+
     index = questionNumber
     let currentQuestion = questions[index]
     const answers = currentQuestion.incorrect_answers.concat(
@@ -128,9 +130,8 @@ const createNewQuestion = (index) => {
       container.appendChild(answer)
     }
     title.innerText = currentQuestion.question
-    questionCounter.innerText = `QUESTION ${
-      questionNumber + 1
-    }/${totalQuestion}`
+    questionCounter.textContent = `QUESTION ${questionNumber + 1}`
+    violetText.textContent = `/ ${totalQuestion}`
   } else {
     handleSendData()
   }

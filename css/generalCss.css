@@ -33,6 +33,10 @@ body {
   margin-top: 3rem;
 }
 
+.logoNoMargin {
+  width: 15rem;
+}
+
 .marginLeft {
   margin-left: 7rem;
 }

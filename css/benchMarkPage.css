@@ -1,6 +1,9 @@
-aside {
+header {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 3rem;
   margin-right: 7rem;
 }
 
@@ -79,7 +82,13 @@ footer {
   width: 60%;
 }
 
+.violet {
+  color: #d20094;
+}
+
 #sectionBtn {
   display: flex;
   justify-content: center;
+
+  margin-top: 1.5rem;
 }
