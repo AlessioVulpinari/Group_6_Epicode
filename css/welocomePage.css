@@ -7,13 +7,13 @@ body {
     font-size: 20px;
   }
   header {
-    padding: 50px 0;
+    padding: 20px 0;
   }
   header img {
     width: 15%;
   }
   .main-title h1 {
-    font-size: 100px;
+    font-size: 3.5em;
     font-weight: 300;
     line-height: 1;
   }
@@ -22,9 +22,7 @@ body {
   }
   .snd-title h3 {
     color: #d20094;
-    font-size: 40px;
-    padding-bottom: 1px;
-    margin: 5px;
+    font-size: 30px;
   }
   .snd-title p {
     font-size: 20px;
@@ -39,14 +37,14 @@ body {
     font-weight: bold;
   }
   .start-ex {
-    padding: 100px 0;
-    margin-right: 200px;
+    padding: 50px 0;
+    margin-right: 100px;
   }
   .container {
     width: 1200px;
     padding: 20px 0;
   }
-  .cr-wrapper *,
+   .cr-wrapper *,
   .cr-wrapper *::before,
   .cr-wrapper *::after {
     box-sizing: content-box !important;
@@ -59,7 +57,7 @@ body {
   }
 
   .cr-wrapper span {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .cr-wrapper {
@@ -74,8 +72,8 @@ body {
     position: absolute;
     top: 50%;
     left: 0;
-    height: 27px;
-    width: 27px;
+    height: 20px;
+    width: 20px;
     background: transparent;
     transition: background 250ms;
     border: 3px solid #f1f5f9;
@@ -87,8 +85,8 @@ body {
     content: "";
     position: absolute;
     display: none;
-    left: 4px;
-    top: 3px;
+    left: 1px;
+    top: 1px;
     width: 20px;
     height: 20px;
     transition: background 250ms;
