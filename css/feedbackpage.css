@@ -29,6 +29,7 @@ p {
 #btnInfo button {
   margin-top: 2.5rem;
   font-size: 1.3rem;
+  cursor: pointer;
 }
 
 #comment {
@@ -44,8 +45,8 @@ p {
 }
 
 #comment:focus {
-  color: white;
-  border: paleturquoise 1px solid;
+  
+  border: none;
 }
 
 .center > p:last-of-type {

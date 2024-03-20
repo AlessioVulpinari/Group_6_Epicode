@@ -20,3 +20,12 @@ for (let i = 0; i < starsArray.length; i++) {
 }
 
 const getIndex = (element) => starsArray.indexOf(element)
+
+
+  
+const bottone = document.getElementById("bottone");
+bottone.addEventListener("click", function (){
+    const id = document.getElementById("comment");
+   
+    window.alert(id.value);
+})
