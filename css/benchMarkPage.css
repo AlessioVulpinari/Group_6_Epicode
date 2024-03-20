@@ -1,11 +1,18 @@
-aside {
+header {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 3rem;
   margin-right: 7rem;
 }
 
 footer {
-  margin-top: 10rem;
+  position: fixed;
+  left: 50%;
+  bottom: 4rem;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
 }
 
 .btn {
@@ -26,12 +33,27 @@ footer {
   border-radius: 40px;
 }
 
-.btnContainer {
+#btnContainer {
   width: 50%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.progressCircle {
+  padding: 20px;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 0px solid transparent;
+  background: conic-gradient(
+    #d20094 0%,
+    #d20094 0%,
+    #00ffff 100%,
+    #00ffff 100%
+  );
+  box-sizing: content-box;
 }
 
 .progressionBar {
@@ -42,8 +64,8 @@ footer {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background: radial-gradient(closest-side, #391555 79%, transparent 80% 100%),
-    conic-gradient(#00ffff 95%, transparent 0);
+  background-image: url(/assets/img/bg.jpg);
+  background-position: center;
 }
 
 .btnSelected {
@@ -61,10 +83,16 @@ footer {
 
 .title h3 {
   font-size: 60px;
-  width: 40%;
+  width: 60%;
+}
+
+.violet {
+  color: #d20094;
 }
 
 #sectionBtn {
   display: flex;
   justify-content: center;
+
+  margin-top: 1.5rem;
 }
