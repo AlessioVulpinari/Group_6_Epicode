@@ -36,10 +36,11 @@ header {
   border: 0px solid transparent;
   background: conic-gradient(
     #00ffff 0%,
-    #00ffff 80%,
-    #d20094 80%,
+    #00ffff calc(var(--correct-percent) * 1%),
+    #d20094 calc(var(--correct-percent) * 1%),
     #d20094 100%
   );
+  box-sizing: content-box;
 }
 .progress-bar {
   border-radius: 50%;

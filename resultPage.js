@@ -1,10 +1,21 @@
 const calcolaPercentualeCorrette = () => {
   let correctScore = document.getElementById("correct");
-  let risposteCorrette = 1;
-  let risposteTotali = 6;
+  let receivedVariable = localStorage.getItem("points");
+  let receivedVariable2 = localStorage.getItem("totalQuestion");
+  let risposteCorrette = receivedVariable;
+  let risposteTotali = receivedVariable2;
   let percentuale = (risposteCorrette / risposteTotali) * 100;
 
   let percentualeRisposteCorrette = percentuale.toFixed(1);
+
+  ///PER CSS
+  let progressBar = document.querySelector(".progress-circle");
+
+  progressBar.style.setProperty(
+    "--correct-percent",
+    percentualeRisposteCorrette
+  );
+  //
 
   let textPercentuale = document.createElement("p");
   textPercentuale.innerText = `${percentualeRisposteCorrette}%`;
