@@ -1,12 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap");
-
+:root {
+  --color-text: rgb(233, 233, 233);
+}
+/* Impostazioni globali */
 body {
   margin-top: 3em;
   margin-left: 3rem;
-  font-family: "Outfit";
-  background-image: url(/assets/img/bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   color: white;
   text-align: center;
   box-sizing: content-box;
@@ -15,8 +14,7 @@ header {
   margin-bottom: 2em;
   text-align: justify;
 }
-#logo {
-  width: 15%;
+.logo {
   margin-left: 7rem;
 }
 #title-results h3 {
@@ -28,6 +26,7 @@ header {
   font-size: 1.8em;
   margin-bottom: 3vw;
 }
+/* Progress circle */
 .progress-circle {
   padding: 50px;
   height: 240px;
@@ -49,6 +48,8 @@ header {
   background-image: url(/assets/img/bg.jpg);
   background-position: center;
 }
+/* Testo circle */
+
 .progress-bar h3,
 h4 {
   margin-top: 25%;
@@ -69,11 +70,12 @@ h4 {
 .progress-bar p {
   margin-right: 10%;
   margin-left: 10%;
-  color: rgb(219, 219, 219);
+  color: var(--color-text);
   font-size: 0.9em;
   font-family: "Outfit";
   font-weight: 200;
 }
+/* Altri elementi */
 .progress-bar,
 #correct,
 #wrong {
@@ -81,25 +83,34 @@ h4 {
 }
 
 #btn-section button {
+  font-weight: bold;
   cursor: pointer;
-  font-size: 1.5em;
-  height: 3.5vw;
+  font-size: 1.3em;
+  height: 4vw;
   width: 13vw;
   color: white;
   margin-top: 3vw;
   border: 2px solid white;
   background: transparent;
+  color: var(--color-text);
+}
+#correct {
+  text-align: left;
+}
+#wrong {
+  text-align: right;
 }
 
 #correct h3,
 #wrong h3 {
-  font-size: 2.5em;
+  font-size: 3.3em;
 }
 #correct > p:first-of-type {
   font-size: 3em;
   font-weight: bold;
 }
 #correct > p:last-of-type {
+  color: var(--color-text);
   font-size: 1.1em;
   font-weight: 200;
 }
@@ -108,10 +119,15 @@ h4 {
   font-weight: bold;
 }
 #wrong > p:last-of-type {
+  color: var(--color-text);
   font-size: 1.1em;
   font-weight: 200;
 }
 #wrong,
+#title-results {
+  opacity: 0.8;
+}
+
 #title-results {
   opacity: 0.9;
 }
