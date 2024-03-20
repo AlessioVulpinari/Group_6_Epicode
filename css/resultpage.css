@@ -7,14 +7,14 @@
   user-select: none;
 }
 body {
-  margin-top: 3em;
+  margin-top: 3rem;
   margin-left: 3rem;
   color: white;
   text-align: center;
   box-sizing: content-box;
 }
 header {
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
   text-align: justify;
 }
 .logo {
