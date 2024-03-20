@@ -8,7 +8,11 @@ header {
 }
 
 footer {
-  margin-top: 10rem;
+  position: fixed;
+  left: 50%;
+  bottom: 4rem;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
 }
 
 .btn {
