@@ -1,12 +1,13 @@
-
-
-  .logo {
-    width: 15%;
-    height: auto;
-    margin: 0 auto;
-    padding-inline-start: 1em;
-    padding-block: 30px;
+body {
+   margin-top: 3em;
+   margin-left: 3em;
+   box-sizing: content-box;
 }
+
+  header {
+   margin-bottom: 2em;
+
+  }
 
 .centerText {
     text-align: center;
@@ -14,23 +15,25 @@
     font-size: 2rem;
 }
 
-h2 {
+.center h2 {
     text-align: center;
     font-weight: bold;
     font-size: 60px;
-    font-family: "Outfit", sans-serif;
+    
 
 }
 
   p {
     text-align: center;
     font-size: 20px;
-    font-family: "Outfit", sans-serif;
-    margin-block: 2em;
+    margin-block: 3rem;
+    
   }
 
- #btnInfo {
-    margin-top: 20px;
+ #btnInfo button {
+    margin-top: 2.5rem;
+    font-size: 1.3rem;
+
  }
 
  #comment {
@@ -52,6 +55,21 @@ h2 {
     
  }
 
+ .center>p:last-of-type {
+   margin-top: 3px;
+   
+ }
+
+ .center>p:first-of-type {
+   margin-bottom: 3px;
+   margin-block: 0px;
+   margin-top: 20px;
+ }
+
+.star {
+  
+  fill: gray;
+  }
 
 
 
