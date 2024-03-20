@@ -2,8 +2,8 @@ const calcolaPercentualeCorrette = () => {
   let correctScore = document.getElementById("correct");
   let receivedVariable = localStorage.getItem("points");
   let receivedVariable2 = localStorage.getItem("totalQuestion");
-  let risposteCorrette = receivedVariable;
-  let risposteTotali = receivedVariable2;
+  let risposteCorrette = 4;
+  let risposteTotali = 10;
   let percentuale = (risposteCorrette / risposteTotali) * 100;
 
   let percentualeRisposteCorrette = percentuale.toFixed(1);
@@ -55,13 +55,10 @@ const calcolaPercentualeSbagliate = (
 
   wrongScore.appendChild(totRisposteSbagliate);
 
-  messageScore(percentualeRisposteCorrette, percentualeRisposteSbagliate);
+  messageScore(percentualeRisposteCorrette);
 };
 
-const messageScore = (
-  percentualeRisposteCorrette,
-  percentualeRisposteSbagliate
-) => {
+const messageScore = (percentualeRisposteCorrette) => {
   let progressBar = document.querySelector(".progress-bar");
   let h3 = document.createElement("h3");
   let h4 = document.createElement("h4");
@@ -69,10 +66,7 @@ const messageScore = (
   let firstP = document.createElement("p");
   let secondP = document.createElement("p");
 
-  if (
-    parseFloat(percentualeRisposteCorrette) >=
-    parseFloat(percentualeRisposteSbagliate)
-  ) {
+  if (parseFloat(percentualeRisposteCorrette) >= 60) {
     h3.innerText = "Congratulations!";
     h4.innerText = "You passed the exam.";
     firstP.innerText = "We'll send you the certificate in few minutes.";
