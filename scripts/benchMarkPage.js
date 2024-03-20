@@ -111,34 +111,56 @@ const createNewQuestion = (index) => {
     for (let i = 0; i < answers.length; i++) {
       let answer = document.createElement("button")
       answer.classList.add("btn")
-      answer.addEventListener("click", handleBtnClick)
       answer.innerText = answers[i]
+      answer.addEventListener("click", handleBtnClick)
       container.appendChild(answer)
     }
-
     title.innerText = currentQuestion.question
     questionCounter.innerText = `QUESTION ${
       questionNumber + 1
     }/${totalQuestion}`
-    questionNumber += 1
   } else {
     handleSendData()
   }
 }
 
-const handleBtnClick = () => {
+const handleBtnClick = (e) => {
   const container = document.getElementById("btnContainer")
 
-  let child = container.lastChild
-  while (child) {
-    container.removeChild(child)
-    child = container.lastChild
+  const btnText = e.srcElement.innerText
+
+  console.log(e)
+
+  console.log(btnText)
+  console.log(questions[questionNumber].correct_answer)
+
+  if (btnText === questions[questionNumber].correct_answer) {
+    points += 1
+    e.srcElement.style.backgroundColor = "green"
+  } else {
+    e.srcElement.style.backgroundColor = "red"
   }
 
-  createNewQuestion(questionNumber)
+  questionNumber += 1
+
+  setTimeout(() => {
+    let child = container.lastChild
+
+    while (child) {
+      container.removeChild(child)
+      child = container.lastChild
+    }
+
+    createNewQuestion(questionNumber)
+  }, 2000)
 }
 
-const handleSendData = () => {}
+const handleSendData = () => {
+  localStorage.setItem("points", points)
+  localStorage.setItem("totalQuestion", totalQuestion)
+
+  window.location.href = "resultPage.html"
+}
 
 window.onload = function () {
   createNewQuestion(questionNumber)
