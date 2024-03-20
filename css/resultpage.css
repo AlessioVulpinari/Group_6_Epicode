@@ -58,7 +58,7 @@ h4 {
   margin-top: 25%;
   margin-right: 10%;
   margin-left: 10%;
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 800;
 }
 .progress-bar h4 {
@@ -74,7 +74,7 @@ h4 {
   margin-right: 10%;
   margin-left: 10%;
   color: var(--color-text);
-  font-size: 0.9em;
+  font-size: 1.1em;
   font-family: "Outfit";
   font-weight: 200;
 }
