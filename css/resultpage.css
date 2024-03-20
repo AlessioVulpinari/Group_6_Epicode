@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap");
+
+body {
+  margin-top: 3em;
+  margin-left: 3rem;
+  font-family: "Outfit";
+  background-image: url(/assets/img/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  box-sizing: content-box;
+}
+header {
+  margin-bottom: 2em;
+  text-align: justify;
+}
+#logo {
+  width: 15%;
+  margin-left: 7rem;
+}
+#title-results h3 {
+  font-size: 2.8em;
+  font-weight: 700;
+}
+#title-results p {
+  font-weight: 200;
+  font-size: 1.8em;
+  margin-bottom: 3vw;
+}
+.progress-circle {
+  padding: 50px;
+  height: 240px;
+  width: 255px;
+  border-radius: 50%;
+  border: 0px solid transparent;
+  background: conic-gradient(
+    #00ffff 0%,
+    #00ffff calc(var(--correct-percent) * 1%),
+    #d20094 calc(var(--correct-percent) * 1%),
+    #d20094 100%
+  );
+  box-sizing: content-box;
+}
+.progress-bar {
+  border-radius: 50%;
+  height: 240px;
+  width: 255px;
+  background-image: url(/assets/img/bg.jpg);
+  background-position: center;
+}
+.progress-bar h3,
+h4 {
+  margin-top: 25%;
+  margin-right: 10%;
+  margin-left: 10%;
+  font-size: 1em;
+  font-weight: 800;
+}
+.progress-bar h4 {
+  margin-top: 0px;
+  color: #00ffff;
+  font-weight: 400;
+}
+
+.progress-bar > p:first-of-type {
+  margin-top: 15px;
+}
+.progress-bar p {
+  margin-right: 10%;
+  margin-left: 10%;
+  color: rgb(219, 219, 219);
+  font-size: 0.9em;
+  font-family: "Outfit";
+  font-weight: 200;
+}
+.progress-bar,
+#correct,
+#wrong {
+  display: inline-block;
+}
+
+#btn-section button {
+  cursor: pointer;
+  font-size: 1.5em;
+  height: 3.5vw;
+  width: 13vw;
+  color: white;
+  margin-top: 3vw;
+  border: 2px solid white;
+  background: transparent;
+}
+
+#correct h3,
+#wrong h3 {
+  font-size: 2.5em;
+}
+#correct > p:first-of-type {
+  font-size: 3em;
+  font-weight: bold;
+}
+#correct > p:last-of-type {
+  font-size: 1.1em;
+  font-weight: 200;
+}
+#wrong > p:first-of-type {
+  font-size: 3em;
+  font-weight: bold;
+}
+#wrong > p:last-of-type {
+  font-size: 1.1em;
+  font-weight: 200;
+}
+#wrong,
+#title-results {
+  opacity: 0.9;
+}
+
+#rating {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
