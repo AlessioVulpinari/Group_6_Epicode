@@ -1,6 +1,7 @@
 let points = 0
 let questionNumber = 0
 let totalQuestion = 10
+let seconds = 0
 
 const questions = [
   {
@@ -20,7 +21,7 @@ const questions = [
     type: "multiple",
     difficulty: "easy",
     question:
-      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?",
     correct_answer: "Final",
     incorrect_answers: ["Static", "Private", "Public"],
   },
@@ -98,8 +99,19 @@ const questions = [
   },
 ]
 
+const removeQuestions = () => {
+  const container = document.getElementById("btnContainer")
+
+  let child = container.lastChild
+
+  while (child) {
+    container.removeChild(child)
+    child = container.lastChild
+  }
+}
+
 const createNewQuestion = (index) => {
-  if (index <= totalQuestion) {
+  if (index < totalQuestion) {
     const container = document.getElementById("btnContainer")
     const title = document.querySelector(".title h3")
     const questionCounter = document.querySelector("footer p")
@@ -125,14 +137,7 @@ const createNewQuestion = (index) => {
 }
 
 const handleBtnClick = (e) => {
-  const container = document.getElementById("btnContainer")
-
   const btnText = e.srcElement.innerText
-
-  console.log(e)
-
-  console.log(btnText)
-  console.log(questions[questionNumber].correct_answer)
 
   if (btnText === questions[questionNumber].correct_answer) {
     points += 1
@@ -144,14 +149,10 @@ const handleBtnClick = (e) => {
   questionNumber += 1
 
   setTimeout(() => {
-    let child = container.lastChild
-
-    while (child) {
-      container.removeChild(child)
-      child = container.lastChild
-    }
-
+    removeQuestions()
     createNewQuestion(questionNumber)
+    seconds = 0
+    handleTimer()
   }, 2000)
 }
 
@@ -159,9 +160,32 @@ const handleSendData = () => {
   localStorage.setItem("points", points)
   localStorage.setItem("totalQuestion", totalQuestion)
 
-  window.location.href = "resultPage.html"
+  window.location.href = "/resultPage.html"
 }
+
+const handleTimer = () => {
+  const circleBar = document.querySelector(".progressCircle")
+  let text = document.querySelector(".progressionBar p")
+
+  seconds++
+
+  if (seconds < 30) {
+    const percentual = 100 - (seconds * 100) / 30
+    circleBar.style.background = `conic-gradient(#9a6a9d 0%, #9a6a9d ${percentual}% , #00ffff ${percentual}%, #00ffff 100%)`
+
+    text.innerText = `seconds ${30 - seconds} remaining`
+  } else {
+    seconds = 0
+    questionNumber += 1
+    removeQuestions()
+    createNewQuestion(questionNumber)
+    handleTimer()
+  }
+}
+
+setInterval(handleTimer, 1000)
 
 window.onload = function () {
   createNewQuestion(questionNumber)
+  handleTimer()
 }

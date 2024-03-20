@@ -34,6 +34,21 @@ footer {
   flex-wrap: wrap;
 }
 
+.progressCircle {
+  padding: 20px;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 0px solid transparent;
+  background: conic-gradient(
+    #d20094 0%,
+    #d20094 0%,
+    #00ffff 100%,
+    #00ffff 100%
+  );
+  box-sizing: content-box;
+}
+
 .progressionBar {
   display: flex;
   justify-content: center;
@@ -42,8 +57,8 @@ footer {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background: radial-gradient(closest-side, #391555 79%, transparent 80% 100%),
-    conic-gradient(#00ffff 95%, transparent 0);
+  background-image: url(/assets/img/bg.jpg);
+  background-position: center;
 }
 
 .btnSelected {
@@ -61,7 +76,7 @@ footer {
 
 .title h3 {
   font-size: 60px;
-  width: 40%;
+  width: 60%;
 }
 
 #sectionBtn {
