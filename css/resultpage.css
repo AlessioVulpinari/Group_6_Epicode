@@ -28,31 +28,46 @@ header {
   font-size: 1.8em;
   margin-bottom: 3vw;
 }
-
-.progress-bar {
-  padding: 10px;
-  height: 200px;
-  width: 200px;
-  border: 50px solid;
+.progress-circle {
+  padding: 50px;
+  height: 240px;
+  width: 255px;
   border-radius: 50%;
-  border-color: #00ffff #00ffff #d20094 #d20094;
+  border: 0px solid transparent;
+  background: conic-gradient(
+    #00ffff 0%,
+    #00ffff 80%,
+    #d20094 80%,
+    #d20094 100%
+  );
 }
-
+.progress-bar {
+  border-radius: 50%;
+  height: 240px;
+  width: 255px;
+  background-image: url(/assets/img/bg.jpg);
+  background-position: center;
+}
 .progress-bar h3,
 h4 {
   margin-top: 25%;
+  margin-right: 10%;
+  margin-left: 10%;
   font-size: 1em;
   font-weight: 800;
 }
 .progress-bar h4 {
   margin-top: 0px;
   color: #00ffff;
+  font-weight: 400;
 }
 
 .progress-bar > p:first-of-type {
   margin-top: 15px;
 }
 .progress-bar p {
+  margin-right: 10%;
+  margin-left: 10%;
   color: rgb(219, 219, 219);
   font-size: 0.9em;
   font-family: "Outfit";
