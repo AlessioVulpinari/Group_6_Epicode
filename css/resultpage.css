@@ -35,10 +35,10 @@ header {
   border-radius: 50%;
   border: 0px solid transparent;
   background: conic-gradient(
-    #00ffff 0%,
-    #00ffff calc(var(--correct-percent) * 1%),
-    #d20094 calc(var(--correct-percent) * 1%),
-    #d20094 100%
+    #d20094 0%,
+    #d20094 calc(1% * (100 - var(--correct-percent))),
+    #00ffff calc(1% * (100 - var(--correct-percent))),
+    #00ffff calc(1% * (100 - var(--correct-percent)))
   );
   box-sizing: content-box;
 }
