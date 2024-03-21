@@ -1,0 +1,35 @@
+body {
+    background-image: url(/assets/img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+  }
+  #all-select {
+    text-align: center;
+  }
+  #difficulty,
+  #number {
+    width: 25%;
+    padding: 10px;
+    font-size: 1.2em;
+  }
+  #difficulty option,
+  #number option {
+    background-color: rgba(216, 216, 216, 0.3);
+    color: black;
+  }
+  #difficulty,
+  #number {
+    background-color: transparent;
+    text-align: center;
+    color: white;
+    border: none;
+    border-bottom: 2px solid #d20094;
+    width: 400px;
+    padding: 7px;
+  }
+  #all-select button {
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 1.3em;
+  }

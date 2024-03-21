@@ -16,6 +16,7 @@ body {
 }
 
 .btnBlueNeon {
+  cursor: pointer;
   width: 200px;
 
   font-size: 1.8rem;

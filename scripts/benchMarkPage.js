@@ -946,8 +946,8 @@ const handleTimer = () => {
   seconds++
 
   if (seconds < 30) {
-    const percentual = 100 - (seconds * 100) / 30
-    circleBar.style.background = `conic-gradient(#9a6a9d 0%, #9a6a9d ${percentual}% , #00ffff ${percentual}%, #00ffff 100%)`
+    const percentual = (seconds * 100) / 30
+    circleBar.style.background = `conic-gradient(#00ffff ${percentual}%, #9a6a9d ${percentual}%, #9a6a9d 100%, #00ffff 0%)`
 
     text.innerText = `${30 - seconds}`
   } else {
