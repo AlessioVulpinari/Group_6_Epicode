@@ -33,12 +33,31 @@ footer span {
   border-radius: 40px;
 }
 
+.btnSelected {
+  background-color: #bc008b;
+}
+
 #btnContainer {
   width: 50%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+}
+
+#sectionBtn {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 1.5rem;
+}
+
+.number {
+  font-size: 60px;
+}
+
+.pText {
+  font-size: 12px;
 }
 
 .progressCircle {
@@ -58,6 +77,7 @@ footer span {
 
 .progressionBar {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 150px;
@@ -66,10 +86,6 @@ footer span {
   background-image: url(/assets/img/bg.jpg);
   background-position: right;
   background-position-y: top;
-}
-
-.btnSelected {
-  background-color: #bc008b;
 }
 
 .title {
@@ -88,10 +104,4 @@ footer span {
 
 .violet {
   color: #d20094;
-}
-
-#sectionBtn {
-  display: flex;
-  justify-content: center;
-  margin-top: 1.5rem;
 }

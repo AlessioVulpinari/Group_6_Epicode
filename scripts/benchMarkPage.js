@@ -166,7 +166,7 @@ const handleSendData = () => {
 
 const handleTimer = () => {
   const circleBar = document.querySelector(".progressCircle")
-  let text = document.querySelector(".progressionBar p")
+  let text = document.querySelector(".progressionBar p:nth-of-type(2)")
 
   seconds++
 
@@ -174,7 +174,7 @@ const handleTimer = () => {
     const percentual = 100 - (seconds * 100) / 30
     circleBar.style.background = `conic-gradient(#9a6a9d 0%, #9a6a9d ${percentual}% , #00ffff ${percentual}%, #00ffff 100%)`
 
-    text.innerText = `seconds ${30 - seconds} remaining`
+    text.innerText = `${30 - seconds}`
   } else {
     seconds = 0
     questionNumber += 1
