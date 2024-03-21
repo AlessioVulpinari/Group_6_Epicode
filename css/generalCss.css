@@ -10,6 +10,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+header {
+  margin-bottom: 2rem;
+}
 
 .bold {
   font-weight: bold;

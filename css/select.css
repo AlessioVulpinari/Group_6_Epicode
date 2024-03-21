@@ -1,10 +1,7 @@
-body {
-  color: white;
-  margin-top: 5vw;
-  margin-top: 1.5rem;
-  margin-left: 3rem;
+header {
+  margin-top: 0.5rem;
+  margin-left: 7rem;
 }
-
 #all-select {
   text-align: center;
 }
@@ -37,4 +34,8 @@ body {
   margin-top: 5vw;
   font-weight: bold;
   font-size: 1.2em;
+}
+#difficulty,
+#number:focus {
+  outline: none;
 }
