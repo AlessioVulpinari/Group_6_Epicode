@@ -1,8 +1,8 @@
 let points = 0
 let questionNumber = 0
-let totalQuestion = 10
+let totalQuestion
 let chosenArray = []
-let nameOfTheArray = ""
+let nameOfTheArray
 
 let seconds = 0
 
@@ -33,7 +33,7 @@ const easyArray = [
     difficulty: "easy",
     category: "Science: Computers",
     question:
-      "The programming language &#039;Swift&#039; was created to replace what other programming language?",
+      "The programming language 'Swift' was created to replace what other programming language?",
     correct_answer: "Objective-C",
     incorrect_answers: ["C#", "Ruby", "C++"],
   },
@@ -75,7 +75,7 @@ const easyArray = [
     difficulty: "easy",
     category: "Science: Computers",
     question:
-      "If you were to code software in this language you&#039;d only be able to type 0&#039;s and 1&#039;s.",
+      "If you were to code software in this language you'd only be able to type 0's and 1's.",
     correct_answer: "Binary",
     incorrect_answers: ["JavaScript", "C++", "Python"],
   },
@@ -153,7 +153,7 @@ const easyArray = [
     difficulty: "easy",
     category: "Science: Computers",
     question:
-      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?",
     correct_answer: "Final",
     incorrect_answers: ["Static", "Private", "Public"],
   },
@@ -172,12 +172,8 @@ const easyArray = [
     category: "Science: Computers",
     question:
       "In any programming language, what is the most common way to iterate through an array?",
-    correct_answer: "&#039;For&#039; loops",
-    incorrect_answers: [
-      "&#039;If&#039; Statements",
-      "&#039;Do-while&#039; loops",
-      "&#039;While&#039; loops",
-    ],
+    correct_answer: "'For' loops",
+    incorrect_answers: ["'If' Statements", "'Do-while' loops", "'While' loops"],
   },
   {
     type: "multiple",
@@ -197,10 +193,10 @@ const easyArray = [
     category: "Science: Computers",
     question: "What does the Prt Sc button do?",
     correct_answer:
-      "Captures what&#039;s on the screen and copies it to your clipboard",
+      "Captures what's on the screen and copies it to your clipboard",
     incorrect_answers: [
       "Nothing",
-      "Saves a .png file of what&#039;s on the screen in your screenshots folder in photos",
+      "Saves a .png file of what's on the screen in your screenshots folder in photos",
       "Closes all windows",
     ],
   },
@@ -220,7 +216,7 @@ const easyArray = [
     type: "boolean",
     difficulty: "easy",
     category: "Science: Computers",
-    question: "&quot;HTML&quot; stands for Hypertext Markup Language.",
+    question: '"HTML"; stands for Hypertext Markup Language.',
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
@@ -443,7 +439,7 @@ const mediumArray = [
     type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
-    question: "What is known as &quot;the brain&quot; of the Computer?",
+    question: "What is known as 'the brain' of the Computer?",
     correct_answer: "Central Processing Unit",
     incorrect_answers: ["Motherboard", "Graphics Processing Unit", "Keyboard"],
   },
@@ -451,7 +447,7 @@ const mediumArray = [
     type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
-    question: "What does &quot;LCD&quot; stand for?",
+    question: "What does 'LCD' stand for?",
     correct_answer: "Liquid Crystal Display",
     incorrect_answers: [
       "Language Control Design",
@@ -488,8 +484,7 @@ const mediumArray = [
     type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
-    question:
-      "Nvidia&#039;s headquarters are based in which Silicon Valley city?",
+    question: "Nvidia's headquarters are based in which Silicon Valley city?",
     correct_answer: "Santa Clara",
     incorrect_answers: ["Palo Alto", "Cupertino", "Mountain View"],
   },
@@ -511,11 +506,11 @@ const mediumArray = [
     category: "Science: Computers",
     question:
       "In HTML, which non-standard tag used to be be used to make elements scroll across the viewport?",
-    correct_answer: "&lt;marquee&gt;&lt;/marquee&gt;",
+    correct_answer: "<marquee></marquee>;",
     incorrect_answers: [
-      "&lt;scroll&gt;&lt;/scroll&gt;",
-      "&lt;move&gt;&lt;/move&gt;",
-      "&lt;slide&gt;&lt;/slide&gt;",
+      "<scroll></scroll>",
+      "<move></move>",
+      "<slide></slide>",
     ],
   },
   {
@@ -593,8 +588,7 @@ const hardArray = [
     type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
-    question:
-      "Lenovo acquired IBM&#039;s personal computer division, including the ThinkPad line of laptops and tablets, in what year?",
+    question: `Lenovo acquired IBM's personal computer division, including the ThinkPad line of laptops and tablets, in what year?`,
     correct_answer: "2005",
     incorrect_answers: ["1999", "2002", "2008"],
   },
@@ -603,13 +597,9 @@ const hardArray = [
     difficulty: "hard",
     category: "Science: Computers",
     question:
-      "According to DeMorgan&#039;s Theorem, the Boolean expression (AB)&#039; is equivalent to:",
-    correct_answer: "A&#039; + B&#039;",
-    incorrect_answers: [
-      "A&#039;B + B&#039;A",
-      "A&#039;B&#039;",
-      "AB&#039; + AB",
-    ],
+      "According to DeMorgan's Theorem, the Boolean expression (AB)' is equivalent to:",
+    correct_answer: "A' + B'",
+    incorrect_answers: ["'B + B' A", "A'B'", "AB' + AB"],
   },
   {
     type: "multiple",
@@ -795,7 +785,7 @@ const hardArray = [
     difficulty: "hard",
     category: "Science: Computers",
     question:
-      "Released in 2001, the first edition of Apple&#039;s Mac OS X operating system (version 10.0) was given what animal code name?",
+      "Released in 2001, the first edition of Apple's Mac OS X operating system (version 10.0) was given what animal code name?",
     correct_answer: "Cheetah",
     incorrect_answers: ["Puma", "Tiger", "Leopard"],
   },
@@ -886,6 +876,8 @@ const removeQuestions = () => {
 }
 
 const createNewQuestion = (index, array) => {
+  console.log(index)
+  console.log(totalQuestion)
   if (index < totalQuestion) {
     const container = document.getElementById("btnContainer")
     const title = document.querySelector(".title h3")
@@ -894,6 +886,7 @@ const createNewQuestion = (index, array) => {
 
     index = questionNumber
     let currentQuestion = array[index]
+
     const answers = currentQuestion.incorrect_answers.concat(
       currentQuestion.correct_answer
     )
@@ -960,34 +953,30 @@ const handleTimer = () => {
 }
 
 const handleStart = () => {
-  // inputbox del numero di domande
-  // inputbox della difficoltà
-  // totalQuestion = valore della input box
-  // nameOfTheArray = nome dell'array
-
+  totalQuestion = localStorage.getItem("maxQuestions")
+  nameOfTheArray = localStorage.getItem("difficulty")
+  console.log(totalQuestion)
   switch (nameOfTheArray) {
-    case "easy":
-      // chosenArray = easyArray
+    case "Easy":
+      chosenArray = easyArray
       break
 
-    case "medium":
-      // chosenArray = mediumArray
+    case "Medium":
+      chosenArray = mediumArray
       break
 
-    case "hard":
-      // chosenArray = hardArray
+    case "Hard":
+      chosenArray = hardArray
       break
 
     default:
       alert("ERRORE DIFFICOLTA NON PRESENTE")
   }
-  // hide the inputBox
   createNewQuestion(questionNumber, chosenArray)
   setInterval(handleTimer, 1000)
+  handleTimer()
 }
 
 window.onload = function () {
-  // createNewQuestion(questionNumber)
-  // handleTimer()
-  // assegnare handleStart al bottone del form
+  handleStart()
 }
