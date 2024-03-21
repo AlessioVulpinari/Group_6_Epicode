@@ -27,6 +27,7 @@ const getIndex = (element) => starsArray.indexOf(element);
 const handleClickBtn = () => {
   const messageContainer = document.getElementById("messageContainer");
   const page = document.getElementById("pageContainer");
+  let tryAgain = document.getElementById("tryAgain");
 
   let message = "";
   if (starIndex < 6) {
@@ -41,6 +42,7 @@ const handleClickBtn = () => {
   }
 
   page.hidden = true;
+  tryAgain.hidden = false;
 
   let thankYouText = document.createElement("h3");
   thankYouText.className = "thankYou";
