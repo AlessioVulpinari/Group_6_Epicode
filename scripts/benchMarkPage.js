@@ -217,7 +217,7 @@ const easyArray = [
     type: "boolean",
     difficulty: "easy",
     category: "Science: Computers",
-    question: '"HTML"; stands for Hypertext Markup Language.',
+    question: '"HTML" stands for Hypertext Markup Language.',
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
@@ -265,11 +265,7 @@ const easyArray = [
     question:
       "The C programming language was created by this American computer scientist. ",
     correct_answer: "Dennis Ritchie",
-    incorrect_answers: [
-      "Tim Berners Lee",
-      "al-Khw\u0101rizm\u012b",
-      "Willis Ware",
-    ],
+    incorrect_answers: ["Tim Berners Lee", "al-Khwārizmī", "Willis Ware"],
   },
   {
     type: "boolean",
@@ -424,7 +420,7 @@ const mediumArray = [
     type: "boolean",
     difficulty: "medium",
     category: "Science: Computers",
-    question: "&quot;Windows NT&quot; is a monolithic kernel.",
+    question: "'Windows NT' is a monolithic kernel.",
     correct_answer: "False",
     incorrect_answers: ["True"],
   },
@@ -547,8 +543,7 @@ const mediumArray = [
     type: "boolean",
     difficulty: "medium",
     category: "Science: Computers",
-    question:
-      "It&#039;s not possible to format a write-protected DVD-R Hard Disk.",
+    question: "It's not possible to format a write-protected DVD-R Hard Disk.",
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
@@ -606,7 +601,7 @@ const hardArray = [
     type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
-    question: "Who invented the &quot;Spanning Tree Protocol&quot;?",
+    question: "Who invented the 'Spanning Tree Protocol'?",
     correct_answer: "Radia Perlman",
     incorrect_answers: ["Paul Vixie", "Vint Cerf", "Michael Roberts"],
   },
@@ -760,7 +755,7 @@ const hardArray = [
     type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
-    question: "The acronym &quot;RIP&quot; stands for which of these?",
+    question: "The acronym 'RIP' stands for which of these?",
     correct_answer: "Routing Information Protocol",
     incorrect_answers: [
       "Runtime Instance Processes",
