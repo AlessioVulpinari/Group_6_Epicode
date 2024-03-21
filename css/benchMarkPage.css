@@ -2,7 +2,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   margin-top: 3rem;
   margin-right: 7rem;
 }
@@ -13,21 +12,22 @@ footer {
   bottom: 4rem;
   transform: translate(-50%, -50%);
   margin: 0 auto;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+footer span {
+  color: rgb(233, 233, 233);
 }
 
 .btn {
   width: 40%;
-
   margin-right: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
-
   padding-top: 1rem;
   padding-bottom: 1rem;
-
   cursor: pointer;
   background-color: rgb(255, 255, 255, 0.1);
-
   box-shadow: -1px -1px 3px white;
   border: none;
   border-radius: 40px;
@@ -60,12 +60,12 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 150px;
   height: 150px;
   border-radius: 50%;
   background-image: url(/assets/img/bg.jpg);
-  background-position: center;
+  background-position: right;
+  background-position-y: top;
 }
 
 .btnSelected {
@@ -82,7 +82,7 @@ footer {
 }
 
 .title h3 {
-  font-size: 60px;
+  font-size: 3.5em;
   width: 60%;
 }
 
@@ -93,6 +93,5 @@ footer {
 #sectionBtn {
   display: flex;
   justify-content: center;
-
   margin-top: 1.5rem;
 }
