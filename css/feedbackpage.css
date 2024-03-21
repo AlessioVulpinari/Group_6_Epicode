@@ -57,14 +57,19 @@ p {
 
 #messageContainer p {
   text-align: center;
-  font-size: 2.2em;
-  line-height: 1.7;
+  font-size: 1.6em;
+  line-height: 2;
+  opacity: 0.9;
 }
 
 #messageContainer {
   margin-right: 20%;
   margin-left: 18%;
   margin-top: 6%;
-  
 }
 
+.thankYou {
+  opacity: 0.9;
+  font-size: 4em;
+  font-weight: 800;
+}
