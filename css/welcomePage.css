@@ -49,7 +49,9 @@ h1 span {
 .cr-wrapper *::after {
   box-sizing: content-box !important;
 }
-
+.disabilited {
+  cursor: not-allowed;
+}
 .cr-wrapper input {
   position: absolute;
   z-index: -1;
@@ -107,16 +109,16 @@ h1 span {
 .cr-wrapper:hover input[type="radio"]:not([disabled]) ~ .cr-input,
 .cr-wrapper input[type="radio"]:focus ~ .cr-input {
   background: #e2e8f0;
-  border-color: #64748b;
+  border-color: #d20094;
 }
 
 .cr-wrapper input[type="checkbox"]:checked ~ .cr-input {
-  background: #40a9bf;
+  background: #d20094;
   border-color: #000000;
 }
 
 .cr-wrapper input[type="radio"]:checked ~ .cr-input {
-  background: #40a9bf;
+  background: #d20094;
   border-color: #000000;
 }
 
@@ -142,12 +144,12 @@ h1 span {
 
 .cr-wrapper:hover input[type="checkbox"]:not([disabled]):checked ~ .cr-input,
 .cr-wrapper input[type="checkbox"]:checked:focus ~ .cr-input {
-  background: #2f7d8e;
+  background: #d20094;
   border-color: #225d69;
 }
 
 .cr-wrapper:hover input[type="radio"]:not([disabled]):checked ~ .cr-input,
 .cr-wrapper input[type="radio"]:checked:focus ~ .cr-input {
-  background: #2f7d8e;
-  border-color: #225d69;
+  background: #d20094;
+  border-color: #d20094;
 }

@@ -1,10 +1,10 @@
-let points = 0
-let questionNumber = 0
-let totalQuestion
-let chosenArray = []
-let nameOfTheArray
+let points = 0;
+let questionNumber = 0;
+let totalQuestion;
+let chosenArray = [];
+let nameOfTheArray;
 
-let seconds = 0
+let seconds = 0;
 
 const easyArray = [
   {
@@ -291,7 +291,7 @@ const easyArray = [
       "HD Graphics 7000",
     ],
   },
-]
+];
 
 const mediumArray = [
   {
@@ -581,7 +581,7 @@ const mediumArray = [
       "Dot matrix printer",
     ],
   },
-]
+];
 
 const hardArray = [
   {
@@ -862,118 +862,117 @@ const hardArray = [
     correct_answer: "Game Maker",
     incorrect_answers: ["Stencyl", "Construct", "Torque 2D"],
   },
-]
+];
 
 const removeQuestions = () => {
-  const container = document.getElementById("btnContainer")
+  const container = document.getElementById("btnContainer");
 
-  let child = container.lastChild
+  let child = container.lastChild;
 
   while (child) {
-    container.removeChild(child)
-    child = container.lastChild
+    container.removeChild(child);
+    child = container.lastChild;
   }
-}
+};
 
 const createNewQuestion = (index, array) => {
   if (index < totalQuestion) {
-    const container = document.getElementById("btnContainer")
-    const title = document.querySelector(".title h3")
-    const questionCounter = document.querySelector("footer span:first-of-type")
-    const violetText = document.querySelector("footer span:nth-of-type(2)")
+    const container = document.getElementById("btnContainer");
+    const title = document.querySelector(".title h3");
+    const questionCounter = document.querySelector("footer span:first-of-type");
+    const violetText = document.querySelector("footer span:nth-of-type(2)");
 
-    index = questionNumber
-    let currentQuestion = array[index]
+    index = questionNumber;
+    let currentQuestion = array[index];
 
     const answers = currentQuestion.incorrect_answers.concat(
       currentQuestion.correct_answer
-    )
+    );
     for (let i = 0; i < answers.length; i++) {
-      let answer = document.createElement("button")
-      answer.classList.add("btn")
-      answer.innerText = answers[i]
-      answer.addEventListener("click", handleBtnClick)
-      container.appendChild(answer)
+      let answer = document.createElement("button");
+      answer.classList.add("btn");
+      answer.innerText = answers[i];
+      answer.addEventListener("click", handleBtnClick); //
+      container.appendChild(answer);
     }
-    title.innerText = currentQuestion.question
-    questionCounter.textContent = `QUESTION ${questionNumber + 1}`
-    violetText.textContent = `/ ${totalQuestion}`
+    title.innerText = currentQuestion.question;
+    questionCounter.textContent = `QUESTION ${questionNumber + 1}`;
+    violetText.textContent = `/ ${totalQuestion}`;
   } else {
-    handleSendData()
+    handleSendData();
   }
-}
+};
 
 const handleBtnClick = (e) => {
-  const btnText = e.srcElement.innerText
+  const btnText = e.srcElement.innerText;
 
   if (btnText === chosenArray[questionNumber].correct_answer) {
-    points += 1
-    e.srcElement.style.backgroundColor = "green"
+    points += 1;
+    e.srcElement.style.backgroundColor = "green";
   } else {
-    e.srcElement.style.backgroundColor = "red"
+    e.srcElement.style.backgroundColor = "red";
   }
 
-  questionNumber += 1
+  questionNumber += 1;
 
   setTimeout(() => {
-    removeQuestions()
-    createNewQuestion(questionNumber, chosenArray)
-    seconds = 0
-    handleTimer()
-  }, 2000)
-}
+    removeQuestions();
+    createNewQuestion(questionNumber, chosenArray);
+    seconds = 0;
+    handleTimer();
+  }, 2000);
+};
 
 const handleSendData = () => {
-  localStorage.setItem("points", points)
-  localStorage.setItem("totalQuestion", totalQuestion)
+  localStorage.setItem("points", points);
+  localStorage.setItem("totalQuestion", totalQuestion);
 
-  window.location.href = "/resultPage.html"
-}
+  window.location.href = "/resultPage.html";
+};
 
 const handleTimer = () => {
-  const circleBar = document.querySelector(".progressCircle")
-  let text = document.querySelector(".progressionBar p:nth-of-type(2)")
+  const circleBar = document.querySelector(".progressCircle");
+  let text = document.querySelector(".progressionBar p:nth-of-type(2)");
 
-  seconds++
+  seconds++;
 
   if (seconds < 30) {
-    const percentual = (seconds * 100) / 30
-    circleBar.style.background = `conic-gradient(#00ffff ${percentual}%, #9a6a9d ${percentual}%, #9a6a9d 100%, #00ffff 0%)`
+    const percentual = (seconds * 100) / 30;
+    circleBar.style.background = `conic-gradient(#00ffff ${percentual}%, #9a6a9d ${percentual}%, #9a6a9d 100%, #00ffff 0%)`;
 
-    text.innerText = `${30 - seconds}`
+    text.innerText = `${30 - seconds}`;
   } else {
-    seconds = 0
-    questionNumber += 1
-    removeQuestions()
-    createNewQuestion(questionNumber, chosenArray)
-    handleTimer()
+    seconds = 0;
+    questionNumber += 1;
+    removeQuestions();
+    createNewQuestion(questionNumber, chosenArray);
+    handleTimer();
   }
-}
+};
 
 const handleStart = () => {
-  totalQuestion = localStorage.getItem("maxQuestions")
-  nameOfTheArray = localStorage.getItem("difficulty")
+  totalQuestion = localStorage.getItem("maxQuestions");
+  nameOfTheArray = localStorage.getItem("difficulty");
   switch (nameOfTheArray) {
     case "Easy":
-      chosenArray = easyArray
-      break
-
+      chosenArray = easyArray;
+      break;
     case "Medium":
-      chosenArray = mediumArray
-      break
+      chosenArray = mediumArray;
+      break;
 
     case "Hard":
-      chosenArray = hardArray
-      break
+      chosenArray = hardArray;
+      break;
 
     default:
-      alert("ERRORE DIFFICOLTA NON PRESENTE")
+      alert("ERRORE DIFFICOLTA NON PRESENTE");
   }
-  createNewQuestion(questionNumber, chosenArray)
-  setInterval(handleTimer, 1000)
-  handleTimer()
-}
+  createNewQuestion(questionNumber, chosenArray);
+  setInterval(handleTimer, 1000);
+  handleTimer();
+};
 
 window.onload = function () {
-  handleStart()
-}
+  handleStart();
+};

@@ -17,19 +17,18 @@ header {
 .bold {
   font-weight: bold;
 }
-
 .btnBlueNeon {
-  cursor: pointer;
   width: 200px;
   font-size: 1.8rem;
   padding-bottom: 0.8rem;
   padding-top: 0.8rem;
   color: black;
   background-color: #00ffff;
-  box-shadow: 0 0 20px 5px #00ffff;
   border: 1px solid transparent;
 }
-
+.btnBlueNeon:hover {
+  box-shadow: 0 0 20px 5px #00ffff;
+};
 .center {
   text-align: center;
 }
