@@ -876,8 +876,6 @@ const removeQuestions = () => {
 }
 
 const createNewQuestion = (index, array) => {
-  console.log(index)
-  console.log(totalQuestion)
   if (index < totalQuestion) {
     const container = document.getElementById("btnContainer")
     const title = document.querySelector(".title h3")
@@ -955,7 +953,6 @@ const handleTimer = () => {
 const handleStart = () => {
   totalQuestion = localStorage.getItem("maxQuestions")
   nameOfTheArray = localStorage.getItem("difficulty")
-  console.log(totalQuestion)
   switch (nameOfTheArray) {
     case "Easy":
       chosenArray = easyArray
