@@ -67,6 +67,7 @@ const messageScore = (percentualeRisposteCorrette) => {
   let secondP = document.createElement("p");
 
   if (parseFloat(percentualeRisposteCorrette) >= 60) {
+    confetti();
     h3.innerText = "Congratulations!";
     h4.innerText = "You passed the exam.";
     firstP.innerText = "We'll send you the certificate in few minutes.";
