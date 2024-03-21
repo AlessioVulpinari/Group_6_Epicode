@@ -1,3 +1,6 @@
+* {
+  user-select: none;
+}
 body {
   margin-top: 1.5rem;
   margin-left: 3rem;
@@ -53,4 +56,37 @@ p {
   margin-bottom: 3px;
   margin-block: 0px;
   margin-top: 20px;
+}
+
+#messageContainer p {
+  text-align: center;
+  font-size: 1.6em;
+  line-height: 2;
+  opacity: 0.9;
+}
+
+#messageContainer {
+  margin-right: 20%;
+  margin-left: 18%;
+  margin-top: 4%;
+}
+
+.thankYou {
+  opacity: 0.9;
+  font-size: 4em;
+  font-weight: 800;
+}
+
+#tryAgain p {
+  opacity: 0.9;
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #d20094;
+  margin-top: 2px;
+}
+
+#tryAgain button {
+  opacity: 0.9;
+  font-size: 1.5em;
+  cursor: pointer;
 }

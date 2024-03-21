@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 let points = 0;
 let questionNumber = 0;
 let totalQuestion;
 let chosenArray = [];
 let nameOfTheArray;
+=======
+let points = 0
+let questionNumber = 0
+let totalQuestion
+let chosenArray = []
+let shuffledArray = []
+let nameOfTheArray
+>>>>>>> fc5111c91d1a175edbb2d610e9f412b7371811ef
 
 let seconds = 0;
 
@@ -216,7 +225,7 @@ const easyArray = [
     type: "boolean",
     difficulty: "easy",
     category: "Science: Computers",
-    question: '"HTML"; stands for Hypertext Markup Language.',
+    question: '"HTML" stands for Hypertext Markup Language.',
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
@@ -264,11 +273,7 @@ const easyArray = [
     question:
       "The C programming language was created by this American computer scientist. ",
     correct_answer: "Dennis Ritchie",
-    incorrect_answers: [
-      "Tim Berners Lee",
-      "al-Khw\u0101rizm\u012b",
-      "Willis Ware",
-    ],
+    incorrect_answers: ["Tim Berners Lee", "al-Khwārizmī", "Willis Ware"],
   },
   {
     type: "boolean",
@@ -423,7 +428,7 @@ const mediumArray = [
     type: "boolean",
     difficulty: "medium",
     category: "Science: Computers",
-    question: "&quot;Windows NT&quot; is a monolithic kernel.",
+    question: "'Windows NT' is a monolithic kernel.",
     correct_answer: "False",
     incorrect_answers: ["True"],
   },
@@ -546,8 +551,7 @@ const mediumArray = [
     type: "boolean",
     difficulty: "medium",
     category: "Science: Computers",
-    question:
-      "It&#039;s not possible to format a write-protected DVD-R Hard Disk.",
+    question: "It's not possible to format a write-protected DVD-R Hard Disk.",
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
@@ -605,7 +609,7 @@ const hardArray = [
     type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
-    question: "Who invented the &quot;Spanning Tree Protocol&quot;?",
+    question: "Who invented the 'Spanning Tree Protocol'?",
     correct_answer: "Radia Perlman",
     incorrect_answers: ["Paul Vixie", "Vint Cerf", "Michael Roberts"],
   },
@@ -759,7 +763,7 @@ const hardArray = [
     type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
-    question: "The acronym &quot;RIP&quot; stands for which of these?",
+    question: "The acronym 'RIP' stands for which of these?",
     correct_answer: "Routing Information Protocol",
     incorrect_answers: [
       "Runtime Instance Processes",
@@ -882,12 +886,28 @@ const createNewQuestion = (index, array) => {
     const questionCounter = document.querySelector("footer span:first-of-type");
     const violetText = document.querySelector("footer span:nth-of-type(2)");
 
+<<<<<<< HEAD
     index = questionNumber;
     let currentQuestion = array[index];
 
     const answers = currentQuestion.incorrect_answers.concat(
       currentQuestion.correct_answer
     );
+=======
+    if (shuffledArray.length === 0) {
+      shuffledArray = shuffle(array)
+      console.log(shuffledArray)
+    }
+
+    index = questionNumber
+
+    let currentQuestion = shuffledArray[index]
+
+    const answers = shuffle(
+      currentQuestion.incorrect_answers.concat(currentQuestion.correct_answer)
+    )
+
+>>>>>>> fc5111c91d1a175edbb2d610e9f412b7371811ef
     for (let i = 0; i < answers.length; i++) {
       let answer = document.createElement("button");
       answer.classList.add("btn");
@@ -906,9 +926,15 @@ const createNewQuestion = (index, array) => {
 const handleBtnClick = (e) => {
   const btnText = e.srcElement.innerText;
 
+<<<<<<< HEAD
   if (btnText === chosenArray[questionNumber].correct_answer) {
     points += 1;
     e.srcElement.style.backgroundColor = "green";
+=======
+  if (btnText === shuffledArray[questionNumber].correct_answer) {
+    points += 1
+    e.srcElement.style.backgroundColor = "green"
+>>>>>>> fc5111c91d1a175edbb2d610e9f412b7371811ef
   } else {
     e.srcElement.style.backgroundColor = "red";
   }
@@ -916,12 +942,21 @@ const handleBtnClick = (e) => {
   questionNumber += 1;
 
   setTimeout(() => {
+<<<<<<< HEAD
     removeQuestions();
     createNewQuestion(questionNumber, chosenArray);
     seconds = 0;
     handleTimer();
   }, 2000);
 };
+=======
+    removeQuestions()
+    createNewQuestion(questionNumber, shuffledArray)
+    seconds = 0
+    handleTimer()
+  }, 2000)
+}
+>>>>>>> fc5111c91d1a175edbb2d610e9f412b7371811ef
 
 const handleSendData = () => {
   localStorage.setItem("points", points);
@@ -942,11 +977,19 @@ const handleTimer = () => {
 
     text.innerText = `${30 - seconds}`;
   } else {
+<<<<<<< HEAD
     seconds = 0;
     questionNumber += 1;
     removeQuestions();
     createNewQuestion(questionNumber, chosenArray);
     handleTimer();
+=======
+    seconds = 0
+    questionNumber += 1
+    removeQuestions()
+    createNewQuestion(questionNumber, shuffledArray)
+    handleTimer()
+>>>>>>> fc5111c91d1a175edbb2d610e9f412b7371811ef
   }
 };
 
@@ -972,6 +1015,14 @@ const handleStart = () => {
   setInterval(handleTimer, 1000);
   handleTimer();
 };
+
+const shuffle = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[array[i], array[j]] = [array[j], array[i]]
+  }
+  return array
+}
 
 window.onload = function () {
   handleStart();
