@@ -124,7 +124,7 @@ const questions = () => {
     correctLi.appendChild(textNodeCorrect);
     ul.appendChild(correctLi);
 
-    summary.appendChild(ul);
+    details.appendChild(ul);
 
     //COMPARAZIONE
 
