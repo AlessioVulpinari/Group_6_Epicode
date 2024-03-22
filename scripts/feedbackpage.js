@@ -13,7 +13,7 @@ const handleEnterStar = (e) => {
   }
 
   for (let k = index + 1; k < starsArray.length; k++) {
-    starsArray[k].childNodes[1].style.fill = "#5f2b73";
+    starsArray[k].childNodes[1].style.fill = "#2c1954";
   }
 };
 

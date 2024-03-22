@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 let points = 0;
 let questionNumber = 0;
 let totalQuestion;
 let chosenArray = [];
 let nameOfTheArray;
-=======
-let points = 0
-let questionNumber = 0
-let totalQuestion
-let chosenArray = []
-let shuffledArray = []
-let nameOfTheArray
->>>>>>> fc5111c91d1a175edbb2d610e9f412b7371811ef
 
 let seconds = 0;
 
@@ -886,28 +877,12 @@ const createNewQuestion = (index, array) => {
     const questionCounter = document.querySelector("footer span:first-of-type");
     const violetText = document.querySelector("footer span:nth-of-type(2)");
 
-<<<<<<< HEAD
     index = questionNumber;
     let currentQuestion = array[index];
 
     const answers = currentQuestion.incorrect_answers.concat(
       currentQuestion.correct_answer
     );
-=======
-    if (shuffledArray.length === 0) {
-      shuffledArray = shuffle(array)
-      console.log(shuffledArray)
-    }
-
-    index = questionNumber
-
-    let currentQuestion = shuffledArray[index]
-
-    const answers = shuffle(
-      currentQuestion.incorrect_answers.concat(currentQuestion.correct_answer)
-    )
-
->>>>>>> fc5111c91d1a175edbb2d610e9f412b7371811ef
     for (let i = 0; i < answers.length; i++) {
       let answer = document.createElement("button");
       answer.classList.add("btn");
@@ -926,15 +901,9 @@ const createNewQuestion = (index, array) => {
 const handleBtnClick = (e) => {
   const btnText = e.srcElement.innerText;
 
-<<<<<<< HEAD
   if (btnText === chosenArray[questionNumber].correct_answer) {
     points += 1;
     e.srcElement.style.backgroundColor = "green";
-=======
-  if (btnText === shuffledArray[questionNumber].correct_answer) {
-    points += 1
-    e.srcElement.style.backgroundColor = "green"
->>>>>>> fc5111c91d1a175edbb2d610e9f412b7371811ef
   } else {
     e.srcElement.style.backgroundColor = "red";
   }
@@ -942,21 +911,12 @@ const handleBtnClick = (e) => {
   questionNumber += 1;
 
   setTimeout(() => {
-<<<<<<< HEAD
     removeQuestions();
     createNewQuestion(questionNumber, chosenArray);
     seconds = 0;
     handleTimer();
   }, 2000);
 };
-=======
-    removeQuestions()
-    createNewQuestion(questionNumber, shuffledArray)
-    seconds = 0
-    handleTimer()
-  }, 2000)
-}
->>>>>>> fc5111c91d1a175edbb2d610e9f412b7371811ef
 
 const handleSendData = () => {
   localStorage.setItem("points", points);
@@ -977,19 +937,11 @@ const handleTimer = () => {
 
     text.innerText = `${30 - seconds}`;
   } else {
-<<<<<<< HEAD
     seconds = 0;
     questionNumber += 1;
     removeQuestions();
     createNewQuestion(questionNumber, chosenArray);
     handleTimer();
-=======
-    seconds = 0
-    questionNumber += 1
-    removeQuestions()
-    createNewQuestion(questionNumber, shuffledArray)
-    handleTimer()
->>>>>>> fc5111c91d1a175edbb2d610e9f412b7371811ef
   }
 };
 
@@ -1018,11 +970,11 @@ const handleStart = () => {
 
 const shuffle = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[array[i], array[j]] = [array[j], array[i]]
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
   }
-  return array
-}
+  return array;
+};
 
 window.onload = function () {
   handleStart();
