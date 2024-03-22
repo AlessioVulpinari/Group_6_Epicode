@@ -114,13 +114,12 @@ const questions = () => {
     question.incorrect_answers.forEach((incorrectAnswer) => {
       let li = document.createElement("li");
       let textNodeLi = document.createTextNode(incorrectAnswer);
-      li.classList.add("error");
       li.appendChild(textNodeLi);
       ul.appendChild(li);
     });
     let correctLi = document.createElement("li");
     let textNodeCorrect = document.createTextNode(question.correct_answer);
-    correctLi.classList.add("check");
+
     correctLi.appendChild(textNodeCorrect);
     ul.appendChild(correctLi);
 
@@ -137,6 +136,6 @@ const questions = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  questions();
   calcolaPercentualeCorrette();
+  questions();
 });

@@ -175,7 +175,7 @@ ul li {
   background-image: url(/assets/img/check.svg);
   background-repeat: no-repeat;
   background-size: 30px;
-  list-style-type: disc;
+  list-style-type: circle;
   background-size: 25px;
   background-position-x: right;
   background-position-y: top;
@@ -190,4 +190,11 @@ ul li {
   background-position-x: right;
   background-position-y: top;
   box-sizing: border-box;
+}
+
+.userSelectVuoto {
+  list-style-type: circle;
+}
+.userSelectPieno {
+  list-style-type: disc;
 }
