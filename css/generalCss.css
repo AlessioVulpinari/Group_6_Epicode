@@ -18,7 +18,6 @@ header {
   font-weight: bold;
 }
 .btnBlueNeon {
-  cursor: pointer;
   width: 200px;
   box-shadow: 0 0 20px 5px #00ffff;
   font-size: 1.8rem;

@@ -2,6 +2,7 @@ let points = 0;
 let questionNumber = 0;
 let totalQuestion;
 let chosenArray = [];
+let shuffledArray = [];
 let nameOfTheArray;
 
 let seconds = 0;
@@ -877,12 +878,19 @@ const createNewQuestion = (index, array) => {
     const questionCounter = document.querySelector("footer span:first-of-type");
     const violetText = document.querySelector("footer span:nth-of-type(2)");
 
-    index = questionNumber;
-    let currentQuestion = array[index];
+    if (shuffledArray.length === 0) {
+      shuffledArray = shuffle(array);
+      console.log(shuffledArray);
+    }
 
-    const answers = currentQuestion.incorrect_answers.concat(
-      currentQuestion.correct_answer
+    index = questionNumber;
+
+    let currentQuestion = shuffledArray[index];
+
+    const answers = shuffle(
+      currentQuestion.incorrect_answers.concat(currentQuestion.correct_answer)
     );
+
     for (let i = 0; i < answers.length; i++) {
       let answer = document.createElement("button");
       answer.classList.add("btn");
@@ -901,7 +909,7 @@ const createNewQuestion = (index, array) => {
 const handleBtnClick = (e) => {
   const btnText = e.srcElement.innerText;
 
-  if (btnText === chosenArray[questionNumber].correct_answer) {
+  if (btnText === shuffledArray[questionNumber].correct_answer) {
     points += 1;
     e.srcElement.style.backgroundColor = "green";
   } else {
@@ -912,7 +920,7 @@ const handleBtnClick = (e) => {
 
   setTimeout(() => {
     removeQuestions();
-    createNewQuestion(questionNumber, chosenArray);
+    createNewQuestion(questionNumber, shuffledArray);
     seconds = 0;
     handleTimer();
   }, 2000);
@@ -940,7 +948,7 @@ const handleTimer = () => {
     seconds = 0;
     questionNumber += 1;
     removeQuestions();
-    createNewQuestion(questionNumber, chosenArray);
+    createNewQuestion(questionNumber, shuffledArray);
     handleTimer();
   }
 };

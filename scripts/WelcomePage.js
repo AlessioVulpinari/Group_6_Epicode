@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   checkbox.addEventListener("change", (event) => {
     if (checkbox.checked) {
       button.disabled = false;
-      button.classList = "btnBlueNeon bold";
+      button.classList = "btnBlueNeon bold abilited";
     } else {
       button.disabled = true;
       button.classList = "btnBlueNeon bold disabilited";
