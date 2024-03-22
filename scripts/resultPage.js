@@ -72,7 +72,12 @@ const messageScore = (percentualeRisposteCorrette) => {
 
   if (parseFloat(percentualeRisposteCorrette) >= 60) {
     sparaCoriandoli();
-    setInterval(sparaCoriandoli, 6000);
+    sparaCoriandoli();
+    sparaCoriandoli();
+    sparaCoriandoli();
+    sparaCoriandoli();
+    sparaCoriandoli();
+    setInterval(sparaCoriandoli, 8000);
     h3.innerText = "Congratulations!";
     h4.innerText = "You passed the exam.";
     firstP.innerText = "We'll send you the certificate in few minutes.";
