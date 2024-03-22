@@ -96,7 +96,7 @@ h4 {
   border: 2px solid white;
   background: transparent;
   color: var(--color-text);
-  margin-bottom: 3vw;
+  margin-bottom: 8vw;
 }
 #btn-section button:hover {
   color: #ffffff;
@@ -149,22 +149,26 @@ h4 {
 
 #question-container {
   display: flex;
-  font-size: 1.5em;
+  font-size: 1.3em;
   flex-direction: column;
   align-items: center;
 }
-
+summary {
+  cursor: pointer;
+  max-width: 93%;
+}
 details {
   padding-bottom: 40px;
   text-align: justify;
-  width: 50%;
+  width: 70%;
   border-bottom: 2px solid #d20094;
   margin-bottom: 50px;
 }
 
 ul li {
+  margin-top: 10px;
   width: 50%;
-  font-size: 0.9em;
+  font-size: 1em;
   margin-top: 30px;
   margin-left: 30px;
   list-style-type: circle;
@@ -176,7 +180,7 @@ ul li {
   background-repeat: no-repeat;
   background-size: 30px;
   list-style-type: circle;
-  background-size: 25px;
+  background-size: 21px;
   background-position-x: right;
   background-position-y: top;
   box-sizing: border-box;
@@ -186,7 +190,7 @@ ul li {
   background-repeat: no-repeat;
   background-size: 30px;
   list-style-type: disc;
-  background-size: 25px;
+  background-size: 21px;
   background-position-x: right;
   background-position-y: top;
   box-sizing: border-box;

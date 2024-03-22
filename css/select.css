@@ -39,3 +39,6 @@ header {
 #number:focus {
   outline: none;
 }
+button {
+  cursor: pointer;
+}
