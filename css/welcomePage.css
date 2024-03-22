@@ -51,17 +51,16 @@ h1 span {
   background-color: #00ffff;
   border: 1px solid transparent;
 }
-.btnWelcomePage:hover {
-  box-shadow: 0 0 20px 5px #00ffff;
-}
-.disabilited {
+
+.disabilited:hover {
   cursor: not-allowed;
+  box-shadow: none;
 }
 .abilited {
   cursor: pointer;
+  box-shadow: 0 0 20px 5px #00ffff;
 }
-.container {
-}
+
 .cr-wrapper *,
 .cr-wrapper *::before,
 .cr-wrapper *::after {
