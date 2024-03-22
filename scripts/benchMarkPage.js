@@ -4,6 +4,7 @@ let totalQuestion
 let chosenArray = []
 let shuffledArray = []
 let nameOfTheArray
+let arrayOfAnswers = []
 
 let seconds = 0
 
@@ -908,7 +909,7 @@ const createNewQuestion = (index, array) => {
 
 const handleBtnClick = (e) => {
   const btnText = e.srcElement.innerText
-
+  arrayOfAnswers.push(btnText)
   if (btnText === shuffledArray[questionNumber].correct_answer) {
     points += 1
     e.srcElement.style.backgroundColor = "green"
@@ -938,8 +939,11 @@ const disableBtn = () => {
 }
 
 const handleSendData = () => {
+  const arrayOfQuestions = chosenArray.slice(0, totalQuestion)
   localStorage.setItem("points", points)
   localStorage.setItem("totalQuestion", totalQuestion)
+  sessionStorage.setItem("arrayOfQuestions", JSON.stringify(arrayOfQuestions))
+  sessionStorage.setItem("arrayOfAnswers", JSON.stringify(arrayOfAnswers))
 
   window.location.href = "/resultPage.html"
 }
