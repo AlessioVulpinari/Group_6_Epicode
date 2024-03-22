@@ -16,10 +16,12 @@ footer {
 }
 
 footer span {
+  font-family: "Outfit", sans-serif;
   color: rgb(233, 233, 233);
 }
 
 .btn {
+  font-family: "Outfit", sans-serif;
   width: 40%;
   margin-right: 2rem;
   margin-bottom: 2rem;
@@ -66,6 +68,7 @@ footer span {
 }
 
 .progressCircle {
+  font-family: "Outfit", sans-serif;
   padding: 20px;
   height: 150px;
   width: 150px;
@@ -94,6 +97,7 @@ footer span {
 }
 
 .title {
+  font-family: "Outfit", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
